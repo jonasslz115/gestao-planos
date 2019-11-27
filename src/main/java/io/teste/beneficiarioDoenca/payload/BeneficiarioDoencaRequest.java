@@ -3,6 +3,7 @@ package io.teste.beneficiarioDoenca.payload;
 import javax.validation.constraints.NotBlank;
 
 public class BeneficiarioDoencaRequest {
+	
 	@NotBlank(message = "O beneficiario deve ser informado!")
 	private Long beneficiarioId;
 	

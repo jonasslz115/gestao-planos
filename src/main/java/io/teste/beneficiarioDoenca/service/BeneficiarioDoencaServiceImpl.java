@@ -1,5 +1,7 @@
 package io.teste.beneficiarioDoenca.service;
 
+import org.springframework.stereotype.Service;
+
 import io.teste.beneficiario.Beneficiario;
 import io.teste.beneficiario.service.BeneficiarioService;
 import io.teste.beneficiarioDoenca.BeneficiarioDoenca;
@@ -8,6 +10,7 @@ import io.teste.beneficiarioDoenca.payload.BeneficiarioDoencaRequest;
 import io.teste.doenca.Doenca;
 import io.teste.doenca.service.DoencaService;
 
+@Service
 public class BeneficiarioDoencaServiceImpl implements BeneficiarioDoencaService{
 
 	private BeneficiarioDoencaRepository beneficiarioDoencaRepository;
@@ -35,7 +38,5 @@ public class BeneficiarioDoencaServiceImpl implements BeneficiarioDoencaService{
 		beneficiarioDoenca.setDoenca(doenca);
 		
 		return beneficiarioDoencaRepository.save(beneficiarioDoenca);
-	}
-	
-	
+	}	
 }

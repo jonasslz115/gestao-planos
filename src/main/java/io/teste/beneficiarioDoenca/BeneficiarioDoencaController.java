@@ -23,8 +23,7 @@ public class BeneficiarioDoencaController {
 	@PostMapping("/v1/beneficiario/doenca")
 	public String create(@Valid @RequestBody BeneficiarioDoencaRequest beneficiarioDoencaRequest) {
 		BeneficiarioDoenca beneficiarioDoenca = beneficiarioDoencaService.create(beneficiarioDoencaRequest);
-		
-		
+				
 		return "Beneficiário '"+beneficiarioDoenca.getBeneficiario().getNome()+"' vinculado à doença '"+beneficiarioDoenca.getDoenca().getDescricao()+"' com sucesso.";
 	}
 }

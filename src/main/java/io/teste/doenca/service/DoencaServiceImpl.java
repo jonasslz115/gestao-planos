@@ -1,9 +1,12 @@
 package io.teste.doenca.service;
 
+import org.springframework.stereotype.Service;
+
 import io.teste.doenca.Doenca;
 import io.teste.doenca.DoencaRepository;
 import io.teste.doenca.payload.DoencaRequest;
 
+@Service
 public class DoencaServiceImpl implements DoencaService {
 
 	private DoencaRepository doencaRepository;
