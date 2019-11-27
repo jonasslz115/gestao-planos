@@ -5,7 +5,6 @@ import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import beneficiario.Beneficiario;
 import beneficiarioDoenca.payload.BeneficiarioDoencaRequest;
 import beneficiarioDoenca.service.BeneficiarioDoencaService;
 
