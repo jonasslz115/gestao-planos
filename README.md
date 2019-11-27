@@ -5,7 +5,7 @@
 APIs do teste
 
 - Comando para executar o build: mvn clean install
-- Comando para executar a app: mvn spring-boot run
+- Comando para executar a app: mvn spring-boot:run
 - Documentação da APIs disponível em: http://localhost:8080/swagger-ui.html
 
 - Para facilitar os testes, adicionei o arquivo Insomnia.json. Nele estão contidos os modelos das requisições.
