@@ -2,3 +2,7 @@
 
 # gestao-planos
 APIs do teste
+
+
+
+Documentação da APIs diponível em: http://localhost:8080/swagger-ui.html
