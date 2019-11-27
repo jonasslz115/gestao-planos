@@ -11,7 +11,6 @@ public class BeneficiarioRequest {
 	@Size(max = 70, message = "O nome deve ter no máximo 70 caracteres!")
 	private String nome;
 	
-	@NotBlank(message = "A data de nascimento deve ser informada!")
 	private LocalDate dataNascimento;
 
 	public String getNome() {

@@ -3,10 +3,10 @@ package io.teste.beneficiario;
 import javax.validation.Valid;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.teste.beneficiario.payload.BeneficiarioRequest;
@@ -29,9 +29,9 @@ public class BeneficiarioController {
 		return beneficiario.getId();
 	}
 	
-	@GetMapping("/v1/beneficiario/{benefificarioId}")
-	public BeneficiarioResponse get(@RequestParam(required = true) Long benefificarioId) {
-		Beneficiario beneficiario = beneficiarioService.get(benefificarioId);
+	@GetMapping("/v1/beneficiario/{id}")
+	public BeneficiarioResponse get(@PathVariable(value = "id") Long id) {
+		Beneficiario beneficiario = beneficiarioService.get(id);
 		
 		BeneficiarioResponse beneficiarioResponse = new BeneficiarioResponse();
 		beneficiarioResponse.setNome(beneficiario.getNome());

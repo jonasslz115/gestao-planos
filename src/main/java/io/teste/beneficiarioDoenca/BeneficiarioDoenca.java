@@ -20,7 +20,7 @@ public class BeneficiarioDoenca implements Serializable {
 	private static final long serialVersionUID = -7896565438953901516L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private	Long id;
 	
 	@ManyToOne(fetch = FetchType.EAGER)

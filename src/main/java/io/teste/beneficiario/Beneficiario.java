@@ -17,7 +17,7 @@ public class Beneficiario implements Serializable {
 	private static final long serialVersionUID = 7626660941798020042L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private	Long id;
 	
 	@Column(nullable = false)

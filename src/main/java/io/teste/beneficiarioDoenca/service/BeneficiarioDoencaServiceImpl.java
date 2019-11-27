@@ -1,5 +1,7 @@
 package io.teste.beneficiarioDoenca.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import io.teste.beneficiario.Beneficiario;
@@ -38,5 +40,11 @@ public class BeneficiarioDoencaServiceImpl implements BeneficiarioDoencaService{
 		beneficiarioDoenca.setDoenca(doenca);
 		
 		return beneficiarioDoencaRepository.save(beneficiarioDoenca);
-	}	
+	}
+
+	@Override
+	public List<BeneficiarioDoenca> getBeneficiarioDoencas(Long beneficiarioId) {
+		return beneficiarioDoencaRepository.findByBeneficiarioId(beneficiarioId);
+	}
+
 }
