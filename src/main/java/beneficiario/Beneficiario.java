@@ -1,17 +1,17 @@
 package beneficiario;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "beneficiario")
 public class Beneficiario implements Serializable {
 
 	private static final long serialVersionUID = 7626660941798020042L;
@@ -23,9 +23,8 @@ public class Beneficiario implements Serializable {
 	@Column(nullable = false)
 	private String nome;
 	
-	@Temporal(TemporalType.DATE)
 	@Column(name = "data_nascimento", nullable = false)
-	private Date dataNascimento;    	
+	private LocalDate dataNascimento;
 
 	public Beneficiario() {		
 	}
@@ -46,11 +45,11 @@ public class Beneficiario implements Serializable {
 		this.nome = nome;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

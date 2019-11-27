@@ -8,11 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 import beneficiario.Beneficiario;
 import doenca.Doenca;
 
 @Entity
+@Table(name = "beneficiario_doenca")
 public class BeneficiarioDoenca implements Serializable {
 	
 	private static final long serialVersionUID = -7896565438953901516L;
@@ -21,10 +23,10 @@ public class BeneficiarioDoenca implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private	Long id;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private	Beneficiario beneficiario;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	private	Doenca doenca;
 
 	public BeneficiarioDoenca() {		
